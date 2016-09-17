@@ -1,0 +1,14 @@
+{
+  "name": "revitalising-frontend-workflow-with-pattern-libraries",
+  "version": "1.0.0",
+  "description": "Revitalising your frontend workflow with pattern libraries",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andymantell/revitalising-frontend-workflow-with-pattern-libraries.git"
+  },
+  "author": "Andy Mantell",
+  "homepage": "https://github.com/andymantell/revitalising-frontend-workflow-with-pattern-libraries#readme"
+}
