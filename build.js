@@ -14,7 +14,7 @@ markpress(path.join(process.cwd(), 'slides.md'), options)
     if(!fs.existsSync('dist')) {
       fs.mkdirSync('dist');
     }
-    fs.writeFileSync('dist/slides.html', content);
+    fs.writeFileSync('dist/index.html', content);
   })
   .catch(function(e) {
     console.log(e);
