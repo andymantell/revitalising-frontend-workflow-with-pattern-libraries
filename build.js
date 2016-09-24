@@ -4,9 +4,10 @@ var markpress = require('markpress');
 
 var options = {
   layout: 'horizontal',
-  theme: 'light',
-  autoSplit: true,
-  silent: false
+  theme: 'dark',
+  autoSplit: false,
+  silent: false,
+  sanitize: false
 }
 
 markpress(path.join(process.cwd(), 'slides.md'), options)
