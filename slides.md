@@ -168,14 +168,30 @@ client
 
 # Demo pages promote documentation by default
 - Handover to backend developers easier
-- Future maintenance is simpler
+
+<center>
+
+![Documentation example](assets/images/tabs.png)
+
+</center>
 
 
 ------
 
 # Modularity enables parallel development
+- Namepsaced CSS scope (Consider adopting a naming convention which promotes this, such as BEM)
+- Modular JavaScript (E.g. ES6 or CommonJS modules via Browserify, Webpack)
+- Physically seperate on disk - no merge conflicts
 - Less stepping on each others toes
-- _Caveat: Requires discipline with CSS naming conventions such as BEM. Am not referring to locally namespaced selectors like WebComponents_
+
+------
+# Modularity enables parallel development
+
+<center>
+
+![Modular components](assets/images/components.png)
+
+</center>
 
 ------
 
@@ -212,17 +228,62 @@ It's a young enough ecosystem that building your own is not necessarily a sin.
 
 ------
 
+# Hang on
+You've invested time and built some fancypants thing, but isn't the original problem still there? We're still throwing stuff over the fence...
+
+------
+
+# Living style guides
+Requires a lot of discipline - but the key is to integrate the style guide into your build process somewhere
+- A Grunt / Gulp build step?
+- Custom npm script
+
+The code which generates your pattern library must _be_ the code that generates your production assets.
+
+------
+
 ## Show and tell: Land Registry Elements
-Built on top of Gov.uk elements
-Components in a custom format using a YAML file to define dependencies
-Web frontend has a built in build tool accessible via an HTTP API
-Or pattern library can be `npm install`ed and built out into a project.
-Visual regression testing in place to prevent conflicts between teams
+
+<center>
+
+![Land Registry Elements build](assets/images/lr-build.png)
+
+</center>
+
+------
+
+## Show and tell: Land Registry Elements
+
+```js
+var path = require('path');
+var landRegistryElements = require('land-registry-elements');
+
+landRegistryElements({
+  'mode': 'production',
+  'destination': path.resolve(__dirname, 'service/ui/.land-registry-elements'),
+  'assetPath': false, // Don't insert an asset path, we'll let flask set it as a global JS variable
+  'components': [
+    'pages/find-property-information/search-form',
+    'pages/find-property-information/search-results',
+    'pages/find-property-information/order-confirmation',
+    'pages/find-property-information/summary',
+    'pages/find-property-information/cookies',
+    'pages/find-property-information/account/create',
+    'pages/land-registry/error-page'
+  ]
+})
+  .then(function(dest) {
+    console.log('Done');
+  })
+  .catch(function(e) {
+    console.error(e);
+  });
+```
 
 ------
 
 ## Land Registry Elements - possible future plans
-- Currently in use on a Gov.uk service - potential to be rolled out to more
+- Currently in use on one Land Registry Gov.uk service - potential to be rolled out to more
 - Decouple from Gov.uk to facilitate use on Land Registry internal systems
 - Decouple the build tool from the components
 
@@ -236,12 +297,12 @@ Visual regression testing in place to prevent conflicts between teams
 ------
 
 # Pitfalls and learnings
-- Pattern library falls behind - best intentions sometimes fall squashed by time constraints
-- Keep on top of tech debt (**photo of unofficial postit note backlog**)
+- Pattern library falls behind - best intentions sometimes squashed by time constraints
+- Keep on top of tech debt (Sometimes hard to justify in a world where the question is always "What is the user need"! **photo of unofficial postit note backlog**)
 
 ------
 
-# Where to go from here
+# Where to go from here?
 - Split components out into individual repositories? Complete modularity.
 - Web Components? (One day...)
 - Provide templates from the pattern library - integrate these into a production app?
