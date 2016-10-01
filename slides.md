@@ -301,7 +301,6 @@ Parses documentation embedded in your CSS / Sass in order to automatically gener
 Relatively easy to integrate with an existing workflow.
 
 ```css
-
 // Buttons
 //
 // A majority of buttons in the site are built from the same base class.
