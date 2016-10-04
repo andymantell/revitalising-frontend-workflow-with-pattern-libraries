@@ -56,12 +56,8 @@ You're given a set of Photoshop files for a site you've got to build. What do yo
 
 # 2006
 
-Start at the top of the homepage and work down, writing HTML, CSS and JS in one big pile of spaghetti.
+## Start at the top of the homepage and work down, writing HTML, CSS and JS in one big pile of spaghetti.
 
-------
-
-# 2007
-* Write all the HTML and _then_ write the CSS because you want to nail the ultimate separation of concerns?
 * Write some JavaScript to fix the rounded corners in IE6
 
 ```js
@@ -84,6 +80,13 @@ break;
 
 ------
 
+# 2007
+## Write all the HTML and _then_ write the CSS because you want to nail the ultimate separation of concerns?
+
+![Html first](assets/images/html-first.png)
+
+------
+
 # 2008
 
 OMG jQuery. Let's put transitions on EVERYTHING
@@ -94,13 +97,33 @@ OMG jQuery. Let's put transitions on EVERYTHING
 
 # 2010
 
-All my classes *must* be "semantic".
+All classes *must* be "semantic". Deep cascade.
 
 Death to presentational classes.
 
 SASS `@extend` everything!
 
 _Hellooo 1mb stylesheet_
+
+```css
+.featured-article {
+  h2 {
+    @extend %teaser-title;
+    @extend %highlight;
+  }
+
+  p {
+    @extend %lede;
+  }
+
+  footer {
+    li {
+      @extend %inline-link;
+    }
+  }
+}
+
+```
 
 ------
 
