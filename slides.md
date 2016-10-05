@@ -383,7 +383,7 @@ ul > li span {
 ## Acknowledge intentional changes
 
 
-![Acknowledge intentional changes](assets/images/acknowledge-diff.png)
+<img src="assets/images/acknowledge-diff.png" width="70%" alt="Acknowledge intentional changes">
 
 
 
