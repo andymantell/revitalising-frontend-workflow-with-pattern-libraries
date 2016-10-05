@@ -57,12 +57,12 @@ body:after {
 }
 
 .impress-on-step-1 {
-  background-image: url(/assets/images/pattern-abstract-honeycomb-metal.jpg);
+  background-image: url(/assets/images/pattern.jpg);
   /*text-shadow: 0 0 30px #000;*/
 }
 
 .impress-on-step-1:after {
-  opacity: 0.7;
+  opacity: 0.4;
 }
 
 .impress-on-step-2 {
