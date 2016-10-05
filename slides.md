@@ -57,7 +57,7 @@ body:after {
 }
 
 .impress-on-step-1 {
-  background-image: url(/assets/images/pattern.jpg);
+  background-image: url(/assets/images/light-pattern.jpg);
   /*text-shadow: 0 0 30px #000;*/
 }
 
@@ -160,7 +160,7 @@ break;
 # 2008
 ## Write all the HTML and _then_ write the CSS because you want to nail the ultimate separation of concerns?
 
-![Html first](assets/images/html-first.png)
+<img src="assets/images/html-first.png" width="40%" alt="Html first">
 
 ------
 
