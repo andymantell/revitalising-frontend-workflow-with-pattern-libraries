@@ -7,7 +7,8 @@ var options = {
 
   autoSplit: false,
   silent: false,
-  sanitize: false
+  sanitize: false,
+  noEmbed: true
 }
 
 module.exports = markpress(path.join(process.cwd(), 'slides.md'), options)

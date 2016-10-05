@@ -8,13 +8,56 @@ ul,
 .editor {
   text-align: left;
 }
+
+body {
+  background: transparent none 0 0 no-repeat;
+  background-size: cover;
+}
+
+body:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #000;
+  display: block;
+  content: '';
+  z-index: 1;
+  opacity: 0;
+}
+
+
+#impress {
+  z-index: 2;
+}
+
+#impress,
+#impress > div,
+.step {
+  -webkit-transition: none!important;
+  -moz-transition: none!important;
+  -ms-transition: none!important;
+  -o-transition: none!important;
+  transition: none!important;
+}
+
+.impress-on-step-1 {
+  background-image: url(/assets/images/light-pattern.jpg);
+  color: #fff;
+  text-shadow: 0 0 30px #000;
+}
+
+.impress-on-step-1:after {
+  opacity: 0.5;
+}
+
 </style>
 
 # Revitalising your frontend workflow with Pattern libraries
 <br><br>
-Andy Mantell
-
-TechExeter 2016
+## Andy Mantell
+## TechExeter 2016
 
 ------
 
