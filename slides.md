@@ -42,29 +42,69 @@ body:after {
   transition: none!important;
 }
 
-.impress-on-step-1 {
-  background-image: url(/assets/images/light-pattern.jpg);
+.impress-on-step-1,
+.impress-on-step-2 {
   color: #fff;
-  text-shadow: 0 0 30px #000;
+}
+
+.impress-on-step-1 img {
+  display: block;
+  width: 150px;
+  margin: 0 auto;
+  border: 1px solid #eee;
+  background-color: #fff;
+  padding: 3px;
+}
+
+.impress-on-step-1 {
+  background-image: url(/assets/images/pattern-abstract-honeycomb-metal.jpg);
+  /*text-shadow: 0 0 30px #000;*/
 }
 
 .impress-on-step-1:after {
-  opacity: 0.5;
+  opacity: 0.7;
 }
+
+.impress-on-step-2 {
+  background-image: url(/assets/images/code.png);
+}
+
+.impress-on-step-3 {
+  background-image: url(/assets/images/journey.jpg);
+  color: #fff;
+  text-shadow: 0 0 15px #000;
+}
+
+.impress-on-step-13 {
+  background-image: url(/assets/images/pexels-photo-137141.jpg);
+  color: #fff;
+  text-shadow: 0 0 55px #000;
+  background-position: center 10%;
+}
+
+.impress-on-step-13:after {
+  opacity: 0.3;
+}
+
+.impress-on-step-14 {
+  background-image: url(/assets/images/train-wreck-steam-locomotive-locomotive-railway-73821.jpg);
+  background-position: center bottom;
+  color: #fff;
+  text-shadow: 0 0 55px #000;
+}
+
 
 </style>
 
-# Revitalising your frontend workflow with Pattern libraries
+# Revitalising your frontend workflow with Pattern Libraries
 <br><br>
 ## Andy Mantell
-## TechExeter 2016
+## Tech Exeter 2016
+![Andy Mantell](assets/images/andy.jpg)
 
 ------
 
 # Hello!
-
-
-![Andy Mantell](assets/images/andy.jpg)
 
 Freelance frontend developer
 
@@ -72,36 +112,30 @@ Dabbles in Node.JS, Python, fun things
 
 Doesn't normally take selfies
 
-
-
-------
-
-
+<br>
 
 ![Andy Mantell](assets/images/pi-cam.jpg)
-
-
 
 ------
 
 # Anyway....
-Let's go on a journey through frontend development
+Let's go on a journey through frontend development.
+
+My journey.
 ------
 
 
-You're given a set of Photoshop files for a site you've got to build. What do you do?
+## You're given a set of Photoshop files for a site you've got to build. What do you do?
 
 ![Photoshop files](assets/images/psds.png)
 
-
-
 ------
 
-# 2006
+# 2007
 
 ## Start at the top of the homepage and work down, writing HTML, CSS and JS in one big pile of spaghetti.
 
-* Write some JavaScript to fix the rounded corners in IE6
+<!-- * Write some JavaScript to fix the rounded corners in IE6 -->
 
 ```js
 // Fix bug where, in ie6, absolutely positioned corners
@@ -123,14 +157,14 @@ break;
 
 ------
 
-# 2007
+# 2008
 ## Write all the HTML and _then_ write the CSS because you want to nail the ultimate separation of concerns?
 
 ![Html first](assets/images/html-first.png)
 
 ------
 
-# 2008
+# 2009
 
 OMG jQuery. Let's put transitions on EVERYTHING
 <br><br>
@@ -177,7 +211,7 @@ _Hellooo 1mb stylesheet_
 ------
 
 # Whatever
-## You picked an approach and ran with it.
+## I picked an approach and ran with it.
 
 ------
 
@@ -187,17 +221,20 @@ _Hellooo 1mb stylesheet_
 ------
 
 # Done
-## A few weeks later you've had to do a bit of bodging.
+## A few weeks later I maaaay have had to do a bit of bodging.
 ## But that won't happen again. Next time will be different
 
 ------
-
 # :shipit:
-## You send it to the backend team and move on. Life is good.
 
+## I send it to the backend team and move on.
+
+## Life is good.
+
+<img src="assets/images/pineapple.gif" alt="Tumblepineapple" width="100"><img src="assets/images/pineapple.gif" alt="Tumblepineapple" width="100"><img src="assets/images/pineapple.gif" alt="Tumblepineapple" width="100">
 ------
 
-# Cue trainwreck
+# Cue trainwreck!
 
 ------
 
