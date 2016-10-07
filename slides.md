@@ -98,7 +98,7 @@ body:after {
 
 # Revitalising your frontend workflow with Pattern Libraries
 <br><br>
-## Andy Mantell
+## [@andymantell](https://twitter.com/andymantell)
 ## Tech Exeter 2016
 ![Andy Mantell](assets/images/andy.jpg)
 
@@ -166,7 +166,14 @@ break;
 
 # 2009
 
-OMG jQuery. Let's put transitions on EVERYTHING
+OMG jQuery. Wouldn't it be great if everything bounced ridiculously when you clicked on it!
+
+```
+As a user
+When I click this button
+I want my eyes to bleed
+```
+
 <br><br>
 ![Transition all the things](assets/images/all-the-things.jpg)
 
@@ -207,7 +214,7 @@ _Hellooo 1mb stylesheet_
 # 2011
 * Bootstrap!
 * Shoehorn it into Bootstrap because that'll save me time right?
-* Yes... Sometimes...
+* Except your designer is not really on board with it, and you spend all your time overriding bootstrap anyway...
 
 ------
 
@@ -248,7 +255,7 @@ _Hellooo 1mb stylesheet_
 ## A snapshot
 ## A spaghetti monster
 <br><br>
-## And then you threw it over the wall
+## And then you threw it over the wall and expect the backend team to reverse engineer it
 
 ------
 
@@ -265,18 +272,23 @@ _Hellooo 1mb stylesheet_
 
 ------
 
-# Self contained patterns promote abstraction, modularity and re-use
-- Re-use across projects, between teams
-- Discipline and focus
+# Self contained patterns promote abstraction, modularity, discipline and focus
+## Favour small composable components over monolithic structures
 
 ![Form session storage pattern](assets/images/lr-form-session-storage-set.png)
 
 ------
 
+# Self contained patterns promote re-use
+## Re-use across projects, between teams. Don't reinvent the wheel with every project.
+
+![Clientside form validation](assets/images/clientside-validation.png)
+------
+
 # Testable
-- Small testable pieces with clear single purposes
-- Provides confidence
-- Isolated from your main application(s)
+## Small testable pieces with clear single purposes
+## Provides confidence
+## Isolated from your main application(s)
 
 ```js
 client
@@ -299,23 +311,76 @@ client
 
 ------
 
-# Demo pages promote documentation by default
-- Handover to backend developers easier
+# Promotes documentation by default
+## Handover to backend developers easier
 
 ![Documentation example](assets/images/tabs.png)
 
 ------
 
 # Modularity enables parallel, scalable development
-- Namepsaced CSS scope (Consider adopting a naming convention which promotes this such as [BEM](http://slides.andymantell.com/digpen-7-modular-and-maintainable-frontends/?full#17))
-- Modular JavaScript (E.g. ES6 or CommonJS modules via Browserify, Webpack)
-- Physically seperate on disk - no merge conflicts
-- Less stepping on each others toes
+
+<div style="float:left;margin-right: 30px">
+
+![Modular components](assets/images/components.png)
+
+</div>
+
+## Physically seperate on disk - no merge conflicts
+## Less stepping on each others toes
+
 
 ------
 # Modularity enables parallel, scalable development
+## Modular JavaScript (E.g. ES6 or CommonJS modules via Browserify, Webpack)
 
-![Modular components](assets/images/components.png)
+```js
+var validate = global.validate = require('validate.js'); // Expose validate as a global so that people can add custom validation routines easily
+var extend = require('extend');
+var domify = require('domify');
+var closest = require('closest');
+var delegate = require('delegate');
+
+function Validator(element, config) {
+  var options = {
+    showSummary: true,
+    showIndividualFormErrors: true,
+    headingMessage: 'The following errors were found:',
+    description: false,
+
+    controlSelector: '.form-control, input[type="checkbox"], input[type="radio"]',
+
+    // Note: Pre-compiled with hoganify browserify transform: @see https://www.npmjs.com/package/hoganify
+    summaryTemplate: require('./clientside-templates/summary.hogan'),
+    individualErrorTemplate: require('./clientside-templates/individualError.hogan'),
+
+    // Form validation rules following the pattern
+    rules: []
+  };
+
+  extend(options, config);
+```
+
+------
+# Modularity enables parallel, scalable development
+## Namespaced CSS scope (Consider adopting a naming convention which promotes this such as BEM)
+(See [http://slides.andymantell.com/digpen-7-modular-and-maintainable-frontends/?full#17](http://slides.andymantell.com/digpen-7-modular-and-maintainable-frontends/?full#17))
+
+```html
+<div class="header">
+  <img class="logo" src="..." />
+
+  <ul class="nav nav--main">
+    <li class="nav__item">
+      <a class="nav__link" href="#">...</a>
+    </li>
+    <li class="nav__item">
+      <a class="nav__link" href="#">...</a>
+    </li>
+  </ul>
+
+</div>
+```
 
 ------
 
@@ -359,7 +424,7 @@ ul > li span {
 ------
 
 # Visual regression testing
-## Acknowledge intentional changes
+## Acknowledge intentional changes by updating the reference renderings
 
 <img src="assets/images/acknowledge-diff.png" width="70%" alt="Acknowledge intentional changes">
 
@@ -503,20 +568,28 @@ landRegistryElements({
 ## Land Registry Elements - learnings
 - Complexity! Care needed when designing tooling - how long would it take you to remove the tooling entirely?
 - Yet another thing for developers to learn
-- Visual regression testing is hard!
+- Visual regression testing is hard! (But running it on a pattern library helps...)
 - Process slows down the flow of patterns from HTML prototypes to production, but in a _good_ way! Prototypes rarely production ready.
+
+------
+
+## Land Registry Elements - learnings
 - Pattern library sometimes falls behind - best intentions sometimes squashed by time constraints
+- Paying off tech debt not always easy to justify, even to myself!
+
+![Unofficial backlog](assets/images/unofficial-backlog.jpg)
 
 ------
 
 # Where to go from here?
 - Split components out into individual repositories? Complete modularity.
-- Web Components? (One day...)
+- Web Components? (Self contained "black boxes" of HTML/CSS/JS code) (One day..!)
 - Provide templates from the pattern library - integrate these into the production app?
 
 ------
 
 # Homework
+- These slides: https://pattern-libraries-talk.herokuapp.com/#/step-1
 - http://styleguides.io
 - https://css-tricks.com/design-systems-building-future/
 - http://danielmall.com/articles/content-display-patterns/
