@@ -57,7 +57,7 @@ body:after {
 }
 
 .impress-on-step-1 {
-  background-image: url(/assets/images/light-pattern.jpg);
+  background-image: url(/assets/images/pattern.jpg);
   /*text-shadow: 0 0 30px #000;*/
 }
 
@@ -207,6 +207,7 @@ _Hellooo 1mb stylesheet_
 # 2011
 * Bootstrap!
 * Shoehorn it into Bootstrap because that'll save me time right?
+* Yes... Sometimes...
 
 ------
 
@@ -222,7 +223,7 @@ _Hellooo 1mb stylesheet_
 
 # Done
 ## A few weeks later I maaaay have had to do a bit of bodging.
-## But that won't happen again. Next time will be different
+## But that won't happen again. Next time will be different.
 
 ------
 # :shipit:
@@ -239,11 +240,11 @@ _Hellooo 1mb stylesheet_
 ------
 
 # What happened?
-## Your work was great, where did it go wrong?
+## My work was great, where did it go wrong?
 
 ------
 
-## You built what you saw, but not what was "meant"
+## I built what you saw, but not what was "meant"
 ## A snapshot
 ## A spaghetti monster
 <br><br>
@@ -260,11 +261,7 @@ _Hellooo 1mb stylesheet_
 
 # So what is one? What's the point?
 
-
-
 ![Example pattern library](assets/images/lr-pattern-library.png)
-
-
 
 ------
 
@@ -305,29 +302,20 @@ client
 # Demo pages promote documentation by default
 - Handover to backend developers easier
 
-
-
 ![Documentation example](assets/images/tabs.png)
-
-
-
 
 ------
 
-# Modularity enables parallel development
+# Modularity enables parallel, scalable development
 - Namepsaced CSS scope (Consider adopting a naming convention which promotes this such as [BEM](http://slides.andymantell.com/digpen-7-modular-and-maintainable-frontends/?full#17))
 - Modular JavaScript (E.g. ES6 or CommonJS modules via Browserify, Webpack)
 - Physically seperate on disk - no merge conflicts
 - Less stepping on each others toes
 
 ------
-# Modularity enables parallel development
-
-
+# Modularity enables parallel, scalable development
 
 ![Modular components](assets/images/components.png)
-
-
 
 ------
 
@@ -341,10 +329,7 @@ client
 # Visual regression testing
 ## Reference rendering
 
-
 ![Reference renderings](assets/images/reference-renderings.png)
-
-
 
 ------
 
@@ -362,30 +347,21 @@ ul > li span {
 # Visual regression testing
 ## TravisCI fails the build
 
-
 ![Travis fail](assets/images/travis-fail.png)
-
-
 
 ------
 
 # Visual regression testing
 ## Resulting diff of the problem
 
-
 ![Diff fail](assets/images/diff-fail.png)
-
-
 
 ------
 
 # Visual regression testing
 ## Acknowledge intentional changes
 
-
 <img src="assets/images/acknowledge-diff.png" width="70%" alt="Acknowledge intentional changes">
-
-
 
 ------
 
@@ -484,11 +460,7 @@ The code which generates your pattern library must _be_ the code that generates 
 
 ## Show and tell: Land Registry Elements
 
-
-
 ![Land Registry Elements build](assets/images/lr-build.png)
-
-
 
 ------
 
